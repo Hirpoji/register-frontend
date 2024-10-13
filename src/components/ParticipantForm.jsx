@@ -20,7 +20,7 @@ function ParticipantForm({ addParticipant }) {
 
   const handleSubmit = () => {
     axios
-      .post(`http://localhost:5000/api/events/${id}/participants`, { name, additionalFields })
+      .post(`https://register-backend-sw9l.onrender.com/api/events/${id}/participants`, { name, additionalFields })
       .then((response) => {
         addParticipant(response.data);
         setName('');

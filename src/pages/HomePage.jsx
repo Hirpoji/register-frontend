@@ -8,14 +8,14 @@ function HomePage() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/events")
+      .get("https://register-backend-sw9l.onrender.com/api/events")
       .then((response) => setEvents(response.data))
       .catch((error) => console.error("Error fetching events:", error));
   }, []);
 
   const createEvent = () => {
     axios
-      .post("http://localhost:5000/api/events", { name: newEventName })
+      .post("https://register-backend-sw9l.onrender.com/api/events", { name: newEventName })
       .then((response) => {
         setEvents([...events, response.data]);
         setNewEventName("");

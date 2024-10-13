@@ -11,7 +11,7 @@ function RegisteredParticipantsPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/events/${id}/registered`)
+      .get(`https://register-backend-sw9l.onrender.com/api/events/${id}/registered`)
       .then((response) => setRegisteredParticipants(response.data))
       .catch((error) => console.error("Error fetching registered participants:", error));
   }, [id]);

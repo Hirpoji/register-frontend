@@ -12,7 +12,7 @@ function EventPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/events/${id}/participants`)
+      .get(`https://register-backend-sw9l.onrender.com/api/events/${id}/participants`)
       .then((response) => setParticipants(response.data))
       .catch((error) => console.error("Error fetching participants:", error));
   }, [id]);
@@ -23,7 +23,7 @@ function EventPage() {
 
   const handleSearch = () => {
     axios
-      .get(`http://localhost:5000/api/events/${id}/participants/search?query=${searchQuery}`)
+      .get(`https://register-backend-sw9l.onrender.com/api/events/${id}/participants/search?query=${searchQuery}`)
       .then((response) => setParticipants(response.data))
       .catch((error) => console.error("Error fetching participants:", error));
   };

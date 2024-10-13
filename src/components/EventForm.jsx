@@ -5,7 +5,7 @@ function EventForm({ addEvent }) {
   const [name, setName] = useState('');
 
   const handleSubmit = () => {
-    axios.post('http://localhost:5000/api/events', { name })
+    axios.post('https://register-backend-sw9l.onrender.com/api/events', { name })
       .then((response) => {
         addEvent(response.data);
         setName('');  // Сброс поля ввода

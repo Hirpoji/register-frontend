@@ -9,7 +9,7 @@ const RegisteredParticipantsPage = ({ eventId }) => {
   useEffect(() => {
     const fetchRegisteredParticipants = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/events/${eventId}/registered`);
+        const response = await axios.get(`https://register-backend-sw9l.onrender.com/api/events/${eventId}/registered`);
         setRegisteredParticipants(response.data);
       } catch (err) {
         console.error("Error fetching registered participants:", err);

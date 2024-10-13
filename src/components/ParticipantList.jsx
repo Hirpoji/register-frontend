@@ -5,7 +5,7 @@ import axios from "axios";
 function ParticipantList({ participants = [], eventId }) {
   const handleRegister = (participantId) => {
     axios
-      .post(`http://localhost:5000/api/events/${eventId}/register`, {
+      .post(`https://register-backend-sw9l.onrender.com/api/events/${eventId}/register`, {
         participantId,
       })
       .then((response) => {
